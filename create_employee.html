@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Employee - Employee Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Employee Manager</h1>
+        <button id="logoutBtn" class="btn-outline">Logout</button>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li>
+                    <a href="dashboard.html" style="text-decoration:none; color:inherit; display:block; padding: 15px;">Form Builder</a>
+                </li>
+                <li class="active">
+                    <a href="create_employee.html" style="text-decoration:none; color:inherit; display:block; padding: 15px;">Create Employee</a>
+                </li>
+                <li>
+                    <a href="employee_list.html" style="text-decoration:none; color:inherit; display:block; padding: 15px;">Employee List</a>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h2>Create New Employee</h2>
+            <p>Fill in the employee details below to add a new employee to the system.</p>
+
+            <div class="form-controls-card">
+                <form id="employeeCreationForm">
+                    <div id="dynamicFieldsContainer">
+                    </div>
+                    
+                    <div id="noFormWarning" style="display: none; color: #6B7280; text-align: center; padding: 2rem;">
+                        No custom fields configured yet. Please go to <a href="dashboard.html">Form Builder</a> to create form fields.
+                    </div>
+                    
+                    <div class="action-buttons" id="formActions" style="display: none; margin-top: 2rem;">
+                        <button type="reset" class="btn-secondary">Clear Form</button>
+                        <button type="submit" id="submitEmployeeBtn" class="btn-primary">Create Employee</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="successMessage" style="display: none; background-color: #DCFCE7; border: 1px solid #86EFAC; color: #166534; padding: 1rem; border-radius: var(--border-radius); margin-top: 1.5rem;">
+                <strong>Success!</strong> Employee created successfully.
+            </div>
+
+            <div id="errorMessage" style="display: none; background-color: #FEE2E2; border: 1px solid #FECACA; color: #DC2626; padding: 1rem; border-radius: var(--border-radius); margin-top: 1.5rem;">
+                <strong>Error!</strong> <span id="errorText"></span>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/employee.js"></script>
+</body>
+</html>

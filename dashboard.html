@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Form Builder</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css"> 
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Employee Manager</h1>
+        <button id="logoutBtn" class="btn-outline">Logout</button>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li class="active">
+                    <a href="dashboard.html" style="text-decoration:none; color:inherit; display:block; padding: 15px;">Form Builder</a>
+                </li>
+                <li>
+                    <a href="create_employee.html" style="text-decoration:none; color:inherit; display:block; padding: 15px;">Create Employee</a>
+                </li>
+                <li>
+                    <a href="employee_list.html" style="text-decoration:none; color:inherit; display:block; padding: 15px;">Employee List</a>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h2>Dynamic Form Builder</h2>
+            <p>Design the employee registration form by adding custom fields below.</p>
+
+            <div class="form-controls-card">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="fieldLabel">Field Label</label>
+                        <input type="text" id="fieldLabel" placeholder="e.g., Joining Date">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="fieldType">Select Input Type</label>
+                        <select id="fieldType">
+                            <option value="text">Text</option>
+                            <option value="number">Number</option>
+                            <option value="date">Date</option>
+                            <option value="password">Password</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="addFieldBtn" class="btn-secondary">Add Field</button>
+                    <button id="saveFormBtn" class="btn-primary">Save Form</button>
+                </div>
+            </div>
+
+            <div class="form-preview-area">
+                <h3>Form Preview</h3>
+                <form id="dynamicFormPreview">
+                    <p id="emptyStateMessage">No fields added yet. Add a field above to start building.</p>
+                    <div id="dropzone" class="dropzone-container">
+                        </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

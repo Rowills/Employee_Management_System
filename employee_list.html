@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List - Employee Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Employee Manager</h1>
+        <button id="logoutBtn" class="btn-outline">Logout</button>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li>
+                    <a href="dashboard.html" style="text-decoration:none; color:inherit; display:block; padding: 15px;">Form Builder</a>
+                </li>
+                <li>
+                    <a href="create_employee.html" style="text-decoration:none; color:inherit; display:block; padding: 15px;">Create Employee</a>
+                </li>
+                <li class="active">
+                    <a href="employee_list.html" style="text-decoration:none; color:inherit; display:block; padding: 15px;">Employee List</a>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h2>Employee Directory</h2>
+            <p>Search and manage your dynamic employee records here.</p>
+
+            <div class="form-controls-card">
+                <div class="search-bar-container" style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                    <div class="input-group" style="flex: 1; margin-bottom: 0;">
+                        <label for="searchFilter">Filter By</label>
+                        <select id="searchFilter" class="form-select">
+                            <option value="all">Search All Fields</option>
+                        </select>
+                    </div>
+                    <div class="input-group" style="flex: 2; margin-bottom: 0;">
+                        <label for="searchInput">Search Keywords</label>
+                        <input type="text" id="searchInput" placeholder="Type to search...">
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="employee-table">
+                        <thead>
+                            <tr id="tableHeaders">
+                                </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            </tbody>
+                    </table>
+                    <p id="noDataMessage" style="text-align: center; padding: 2rem; color: #6B7280; display: none;">No employees found.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/employee_list.js"></script>
+</body>
+</html>
